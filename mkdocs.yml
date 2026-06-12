@@ -8,7 +8,6 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: pt-BR
-  favicon: assets/favicon.png
   font:
     text: Roboto
     code: Roboto Mono
