@@ -1,31 +1,69 @@
-/* ─── Paleta de cores BoltAI ─────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════════
+   BoltAI — tema da documentação alinhado ao design system do app
+   (front-omnichannel · Mantine v9). Tokens extraídos de
+   baseTheme.ts / projectOverrides.ts.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ─── Paleta da marca (verde) — passos do design system ──────────── */
 :root {
-  --md-primary-fg-color:        #1A56DB;
-  --md-primary-fg-color--light: #3B82F6;
-  --md-primary-fg-color--dark:  #1E40AF;
-  --md-accent-fg-color:         #1A56DB;
-  --md-typeset-a-color:         #1A56DB;
+  --bolt-green-0: #E9F7F1;  /* fundo muito suave / hover sutil */
+  --bolt-green-1: #D2EEE1;  /* badge / tag light */
+  --bolt-green-5: #4DBD89;
+  --bolt-green-6: #20AC6B;  /* primary — cor principal da marca */
+  --bolt-green-7: #1A9159;  /* hover de botão primário */
+  --bolt-green-8: #147246;  /* active / pressed */
+  --bolt-green-9: #136D43;
+
+  /* Cores semânticas (light) */
+  --bolt-success: #4CAF50;
+  --bolt-warn:    #FAB005;
+  --bolt-error:   #DE3630;
+  --bolt-info:    #2196F3;
+
+  /* Mapeamento para o Material */
+  --md-primary-fg-color:        #20AC6B;
+  --md-primary-fg-color--light: #4DBD89;
+  --md-primary-fg-color--dark:  #1A9159;
+  --md-accent-fg-color:         #1A9159;
+  --md-typeset-a-color:         #1A9159;
 }
 
+/* ─── Dark mode (slate) — alinhado ao app ────────────────────────── */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        #3B82F6;
-  --md-primary-fg-color--light: #60A5FA;
-  --md-primary-fg-color--dark:  #1A56DB;
-  --md-accent-fg-color:         #60A5FA;
+  --md-primary-fg-color:        #20AC6B;
+  --md-primary-fg-color--light: #4DBD89;
+  --md-primary-fg-color--dark:  #147246;
+  --md-accent-fg-color:         #79CDA6;
+  --md-typeset-a-color:         #4DBD89;
+
+  /* Fundos: body #141414 / superfícies #1E1E1E */
+  --md-default-bg-color:           #141414;
+  --md-code-bg-color:              #1E1E1E;
+  --md-default-fg-color--lightest: #2A2A2A;
+
+  /* Semânticas (dark) */
+  --bolt-success: #40C057;
+  --bolt-error:   #FA0505;
+  --bolt-info:    #57B7F2;
 }
 
-/* ─── Tipografia ─────────────────────────────────────────────────── */
+/* ─── Tipografia — Roboto (igual ao app) ─────────────────────────── */
 :root {
-  --md-text-font: "Inter", system-ui, sans-serif;
-  --md-code-font: "JetBrains Mono", "Fira Code", monospace;
+  --md-text-font: "Roboto", system-ui, sans-serif;
+  --md-code-font: "Roboto Mono", "JetBrains Mono", monospace;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ─── Cabeçalho ──────────────────────────────────────────────────── */
 .md-header {
-  box-shadow: 0 1px 0 rgba(0,0,0,.08);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .08);
 }
 
-/* ─── Tabelas ────────────────────────────────────────────────────── */
+/* ─── Tabelas (radius md · header na cor da marca) ───────────────── */
 .md-typeset table:not([class]) {
   border-radius: 8px;
   overflow: hidden;
@@ -48,18 +86,24 @@
   background-color: var(--md-default-fg-color--lightest);
 }
 
-/* ─── Admonitions customizados ───────────────────────────────────── */
+/* ─── Admonitions / details (radius md, sombra xs) ───────────────── */
 .md-typeset .admonition,
 .md-typeset details {
   border-radius: 8px;
   font-size: .875rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
 }
 
-/* ─── Imagens com bordas e sombra ────────────────────────────────── */
+/* ─── Botões de conteúdo (radius sm, como inputs do app) ─────────── */
+.md-typeset .md-button {
+  border-radius: 4px;
+}
+
+/* ─── Imagens com borda e sombra (shadow xs) ─────────────────────── */
 .md-typeset img {
   border-radius: 8px;
   border: 1px solid var(--md-default-fg-color--lightest);
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
   max-width: 100%;
 }
 
