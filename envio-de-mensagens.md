@@ -1,0 +1,85 @@
+site_name: Manual do Usuário — BoltAI
+site_description: Documentação completa da Plataforma de Atendimento Omnichannel BoltAI
+site_url: https://grupoinlog.github.io/docs-boltai
+repo_url: https://github.com/GrupoInlog/docs-boltai
+repo_name: GrupoInlog/docs-boltai
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  favicon: assets/favicon.png
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+
+extra_css:
+  - assets/custom.css
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - toc:
+      permalink: true
+      title: Nesta página
+
+nav:
+  - Início: index.md
+  - Chat:
+    - Visão Geral: chat/index.md
+    - Listagem de Conversas: chat/listagem-conversas.md
+    - Cadastro de Contatos: chat/cadastro-contatos.md
+    - Envio de Mensagens: chat/envio-mensagens.md
+    - Detalhes do Contato: chat/detalhes-contato.md
+    - Transferir uma Conversa: chat/transferir-conversa.md
+    - Encerrar uma Conversa: chat/encerrar-conversa.md
+  - Conversas Internas:
+    - Visão Geral: conversas-internas/index.md
+    - Conversa Direta: conversas-internas/conversa-direta.md
+    - Grupos Internos: conversas-internas/grupos-internos.md
+  - Analytics:
+    - Visão Geral: analytics/index.md
+    - Painel de Indicadores: analytics/painel-indicadores.md
+    - Gráficos e Histórico: analytics/graficos-historico.md
+    - Filtros: analytics/filtros.md
+    - Histórico Detalhado: analytics/historico-detalhado.md
+  - Administração:
+    - Visão Geral: administracao/index.md
+    - Usuários: administracao/usuarios.md
+    - Departamentos: administracao/departamentos.md
+    - Tags: administracao/tags.md
+    - Canais: administracao/canais.md
+    - Integrações: administracao/integracoes.md
